@@ -56,9 +56,9 @@ public class ThirdActivity extends AppCompatActivity {
                 Intent intentCall = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + number));
 
                 if (CheckPermission(Manifest.permission.CALL_PHONE)) {
-                    /*if (ActivityCompat.checkSelfPermission(ThirdActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(ThirdActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                         return;
-                    }*/
+                    }
                     startActivity(intentCall);
                 } else {
                     Toast.makeText(ThirdActivity.this, "User decliend the access", Toast.LENGTH_LONG).show();
